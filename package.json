@@ -1,0 +1,19 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "Node.js Application To Track Habits.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusharOxacular09/Habit_Tracker.git"
+  },
+  "author": "Tushar Kanta Swain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tusharOxacular09/Habit_Tracker/issues"
+  },
+  "homepage": "https://github.com/tusharOxacular09/Habit_Tracker#readme"
+}
