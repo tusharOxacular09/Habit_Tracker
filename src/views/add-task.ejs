@@ -1,0 +1,71 @@
+<section>
+  <style>
+    .task-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .task-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 1rem;
+      width: 250px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s;
+      padding: 10px;
+    }
+
+    .task-card:hover {
+      transform: scale(1.01);
+    }
+
+    .task-card img {
+      min-width: 60%;
+      width: fit-content;
+    }
+
+    .task-card h2 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .task-card p {
+      padding: 0 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    form {
+      padding: 1rem;
+    }
+
+    form input,
+    form button {
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+  <h1>Add a New Task</h1>
+  <div class="task-cards">
+    <% availableTasks.forEach(task => { %> <% if (task.isAvailable) { %>
+    <div class="task-card">
+      <img src="<%= task.image %>" alt="<%= task.name %>" />
+      <h2><%= task.name %></h2>
+      <p><%= task.description %></p>
+      <form action="/add-task" method="POST">
+        <input type="hidden" name="task" value="<%= JSON.stringify(task) %>" />
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+    </div>
+    <% } %> <% }) %>
+  </div>
+</section>

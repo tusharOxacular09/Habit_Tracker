@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Node.js Application To Track Habits.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/tusharOxacular09/Habit_Tracker/issues"
   },
-  "homepage": "https://github.com/tusharOxacular09/Habit_Tracker#readme"
+  "homepage": "https://github.com/tusharOxacular09/Habit_Tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3",
+    "nodemon": "^3.1.4"
+  }
 }
