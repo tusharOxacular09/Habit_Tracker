@@ -1,6 +1,6 @@
 export function getCurrentWeekStatus(dailyStatus) {
   const currentWeekStatus = [];
-  const today = new Date(); // This is a Wednesday
+  const today = new Date();
   const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
   const startOfWeek = new Date(today); // Copy the date object
   startOfWeek.setDate(today.getDate() - dayOfWeek); // Set to the start of the week
